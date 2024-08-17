@@ -15,7 +15,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: "https://hotel-software-client.vercel.app/",
+    origin: "https://hotel-software-client.vercel.app",
     methods:['POST',"GET"],
     credentials: true
 }));
