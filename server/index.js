@@ -16,6 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: "http://localhost:5173",
+    methods:['POST',"GET"],
     credentials: true
 }));
 app.use(cookieParser())
@@ -23,8 +24,7 @@ app.use(cookieParser())
 const PORT = process.env.PORT || 5000;
 
 const connectDB = async () => {
-    mongoose.connect(process.env.MONGO).then(() => {
-        console.log("connected to db");
+    mongoose.connect('mongodb+srv://chinarayudubellary7:Sy8Den3Tm4Bo2m2C@chinna.kbdkakr.mongodb.net/?retryWrites=true&w=majority&appName=CHINNA')
     })
 }
 
